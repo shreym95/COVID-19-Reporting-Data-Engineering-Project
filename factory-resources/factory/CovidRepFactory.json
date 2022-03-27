@@ -1,0 +1,9 @@
+{
+	"name": "CovidRepFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "18fc0881-2533-419d-ab27-bb4e5d01f355",
+		"tenantId": "0c68fd27-95af-49fe-81d4-bf333011a670"
+	}
+}
