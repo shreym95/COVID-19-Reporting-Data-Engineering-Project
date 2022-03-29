@@ -1,0 +1,17 @@
+{
+	"name": "TR_ingest_cases_deaths_ind_uk_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-03-30T01:27:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
