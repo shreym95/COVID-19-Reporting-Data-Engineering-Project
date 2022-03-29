@@ -15,13 +15,7 @@
 			"value": "https://covidreportingdatalake99.dfs.core.windows.net"
 		},
 		"LS_http_ecdc_github_data_properties_typeProperties_url": {
-			"value": "https://ecdc.blob.core.windows.net"
-		},
-		"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sourceRelativeUrl": {
-			"value": "covid19/case_deaths_uk_ind_only.csv"
-		},
-		"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sinkFileName": {
-			"value": "case_deaths_uk_ind_only.csv"
+			"value": "@{linkedService().sourceBaseURL}"
 		},
 		"trigger_on_file_creation_properties_typeProperties_scope": {
 			"value": "/subscriptions/a083ce97-bd37-41b7-9cb5-eac15fbce79e/resourceGroups/Covid-Reporting/providers/Microsoft.Storage/storageAccounts/covidreportingsc"
