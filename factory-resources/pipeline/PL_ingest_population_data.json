@@ -12,8 +12,8 @@
 						"referenceName": "DS_population_by_age_gz",
 						"type": "DatasetReference"
 					},
-					"timeout": "1.00:00:00",
-					"sleep": 6000,
+					"timeout": "0.00:10:00",
+					"sleep": 60,
 					"minimumSize": 1024
 				}
 			},
@@ -48,6 +48,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
