@@ -2,7 +2,7 @@
 	"name": "TR_ingest_cases_deaths_ind_uk_data",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -20,7 +20,7 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 1,
-				"startTime": "2022-03-30T01:27:00",
+				"startTime": "2022-03-30T01:30:00",
 				"timeZone": "India Standard Time"
 			}
 		}
