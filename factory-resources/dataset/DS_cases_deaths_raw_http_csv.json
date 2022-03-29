@@ -1,0 +1,22 @@
+{
+	"name": "DS_cases_deaths_raw_http_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_http_ecdc_github_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "covid19/cases_deaths.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
