@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "CovidRepFactory"
+		},
+		"LS_adls_covidreportingdatalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_adls_covidreportingdatalake'"
+		},
+		"LS_blobstorage_covidreportingsc_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_blobstorage_covidreportingsc'"
+		},
+		"LS_adls_covidreportingdatalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://covidreportingdatalake99.dfs.core.windows.net"
+		},
+		"trigger_on_file_creation_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/a083ce97-bd37-41b7-9cb5-eac15fbce79e/resourceGroups/Covid-Reporting/providers/Microsoft.Storage/storageAccounts/covidreportingsc"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "CovidRepFactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_adls_covidreportingdatalake_accountKey": {
+						"value": "[parameters('LS_adls_covidreportingdatalake_accountKey')]"
+					},
+					"LS_blobstorage_covidreportingsc_connectionString": {
+						"value": "[parameters('LS_blobstorage_covidreportingsc_connectionString')]"
+					},
+					"LS_adls_covidreportingdatalake_properties_typeProperties_url": {
+						"value": "[parameters('LS_adls_covidreportingdatalake_properties_typeProperties_url')]"
+					},
+					"trigger_on_file_creation_properties_typeProperties_scope": {
+						"value": "[parameters('trigger_on_file_creation_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

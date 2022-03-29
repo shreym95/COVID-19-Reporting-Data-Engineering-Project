@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "CovidRepFactory"
+		},
+		"LS_adls_covidreportingdatalake_accountKey": {
+			"value": ""
+		},
+		"LS_blobstorage_covidreportingsc_connectionString": {
+			"value": ""
+		},
+		"LS_adls_covidreportingdatalake_properties_typeProperties_url": {
+			"value": "https://covidreportingdatalake99.dfs.core.windows.net"
+		},
+		"trigger_on_file_creation_properties_typeProperties_scope": {
+			"value": "/subscriptions/a083ce97-bd37-41b7-9cb5-eac15fbce79e/resourceGroups/Covid-Reporting/providers/Microsoft.Storage/storageAccounts/covidreportingsc"
+		}
+	}
+}
