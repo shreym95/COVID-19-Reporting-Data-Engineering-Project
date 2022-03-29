@@ -8,10 +8,6 @@
 				"pipelineReference": {
 					"referenceName": "PL_ingest_ecdc_data",
 					"type": "PipelineReference"
-				},
-				"parameters": {
-					"sourceRelativeUrl": "covid19/case_deaths_uk_ind_only.csv",
-					"sinkFileName": "case_deaths_uk_ind_only.csv"
 				}
 			}
 		],
@@ -21,6 +17,7 @@
 				"frequency": "Day",
 				"interval": 1,
 				"startTime": "2022-03-30T02:15:00",
+				"endTime": "2022-03-30T20:40:04",
 				"timeZone": "India Standard Time"
 			}
 		}
