@@ -45,8 +45,8 @@
 								"type": "DatasetReference",
 								"parameters": {}
 							},
-							"timeout": "1.00:00:00",
-							"sleep": 6000,
+							"timeout": "0.00:10:00",
+							"sleep": 60,
 							"minimumSize": 1024
 						}
 					},
