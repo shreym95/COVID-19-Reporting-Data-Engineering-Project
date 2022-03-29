@@ -2,7 +2,7 @@
 	"name": "TR_ingest_cases_deaths_ind_uk_data",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {

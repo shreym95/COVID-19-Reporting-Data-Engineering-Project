@@ -1,0 +1,19 @@
+{
+	"name": "DS_ecdc_lookup_list",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blobstorage_covidreportingsc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list.json",
+				"container": "configs"
+			}
+		},
+		"schema": {}
+	}
+}
