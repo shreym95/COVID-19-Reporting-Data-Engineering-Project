@@ -19,6 +19,18 @@
 			"type": "string",
 			"defaultValue": "https://covidreportingdatalake99.dfs.core.windows.net"
 		},
+		"LS_http_ecdc_github_data_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ecdc.blob.core.windows.net"
+		},
+		"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sourceRelativeUrl": {
+			"type": "string",
+			"defaultValue": "covid19/case_deaths_uk_ind_only.csv"
+		},
+		"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sinkFileName": {
+			"type": "string",
+			"defaultValue": "case_deaths_uk_ind_only.csv"
+		},
 		"trigger_on_file_creation_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/a083ce97-bd37-41b7-9cb5-eac15fbce79e/resourceGroups/Covid-Reporting/providers/Microsoft.Storage/storageAccounts/covidreportingsc"
@@ -58,6 +70,15 @@
 					},
 					"LS_adls_covidreportingdatalake_properties_typeProperties_url": {
 						"value": "[parameters('LS_adls_covidreportingdatalake_properties_typeProperties_url')]"
+					},
+					"LS_http_ecdc_github_data_properties_typeProperties_url": {
+						"value": "[parameters('LS_http_ecdc_github_data_properties_typeProperties_url')]"
+					},
+					"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sourceRelativeUrl": {
+						"value": "[parameters('TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sourceRelativeUrl')]"
+					},
+					"TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sinkFileName": {
+						"value": "[parameters('TR_ingest_cases_deaths_ind_uk_data_properties_PL_ingest_ecdc_data_parameters_sinkFileName')]"
 					},
 					"trigger_on_file_creation_properties_typeProperties_scope": {
 						"value": "[parameters('trigger_on_file_creation_properties_typeProperties_scope')]"
