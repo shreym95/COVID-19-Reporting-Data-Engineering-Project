@@ -3,7 +3,18 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_ingest_ecdc_data",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"sourceRelativeUrl": "covid19/case_deaths_uk_ind_only.csv",
+					"sinkFileName": "case_deaths_uk_ind_only.csv"
+				}
+			}
+		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
